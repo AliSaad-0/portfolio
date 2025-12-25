@@ -43,7 +43,7 @@ const Hero = () => {
                             <div className="glow-circle"></div>
                             <div className="profile-image-container">
                                 <img
-                                    src="/images/profile.png"
+                                    src={`${process.env.PUBLIC_URL}/images/profile.png`}
                                     alt="Saad - Full Stack Developer & DevOps Engineer"
                                     className="profile-image"
                                 />

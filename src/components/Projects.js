@@ -80,28 +80,28 @@ const Projects = () => {
       url: 'https://vissioon.co/',
       description: 'A comprehensive business platform with modern design and robust functionality.',
       category: 'Business Website',
-      image: '/images/vissioon.png'
+      image: `${process.env.PUBLIC_URL}/images/vissioon.png`
     },
     {
       name: 'TalentSource',
       url: 'https://talentsourceplatform.com/',
       description: 'A talent management and sourcing platform built for scalability and performance.',
       category: 'SaaS Platform',
-      image: '/images/TalentSource.png'
+      image: `${process.env.PUBLIC_URL}/images/TalentSource.png`
     },
     {
       name: 'Done Workspace',
       url: 'https://doneworkspace.com/',
       description: 'A productivity and workspace management solution with intuitive user experience.',
       category: 'SaaS Platform',
-      image: '/images/Done.png'
+      image: `${process.env.PUBLIC_URL}/images/Done.png`
     },
     {
       name: 'MailCub',
       url: 'https://mailcub.com/',
       description: 'An email management and communication platform with advanced features.',
       category: 'SaaS Platform',
-      image: '/images/mailcub.png'
+      image: `${process.env.PUBLIC_URL}/images/mailcub.png`
     }
   ];
 
