@@ -5,6 +5,7 @@
   padding-top: 80px;
   background-color: var(--bg-primary);
   position: relative;
+  scroll-margin-top: 80px;
 }
 
 .hero-content {
@@ -67,6 +68,29 @@
   line-height: 1.2;
   margin-bottom: 16px;
   color: var(--text-primary);
+  text-shadow: 
+    0 0 10px rgba(0, 229, 255, 0.5),
+    0 0 20px rgba(0, 229, 255, 0.3),
+    0 0 30px rgba(0, 229, 255, 0.2),
+    0 0 40px rgba(0, 229, 255, 0.1);
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    text-shadow: 
+      0 0 10px rgba(0, 229, 255, 0.5),
+      0 0 20px rgba(0, 229, 255, 0.3),
+      0 0 30px rgba(0, 229, 255, 0.2),
+      0 0 40px rgba(0, 229, 255, 0.1);
+  }
+  50% {
+    text-shadow: 
+      0 0 15px rgba(0, 229, 255, 0.7),
+      0 0 25px rgba(0, 229, 255, 0.5),
+      0 0 35px rgba(0, 229, 255, 0.3),
+      0 0 50px rgba(0, 229, 255, 0.2);
+  }
 }
 
 .hero-tech-stack {
@@ -242,7 +266,25 @@
   box-sizing: border-box;
   flex-shrink: 0;
   filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.6)) 
-          drop-shadow(0 0 30px rgba(0, 229, 255, 0.15));
+          drop-shadow(0 0 20px rgba(0, 229, 255, 0.5))
+          drop-shadow(0 0 40px rgba(0, 229, 255, 0.3))
+          drop-shadow(0 0 60px rgba(0, 229, 255, 0.2));
+  animation: image-glow-pulse 3s ease-in-out infinite;
+}
+
+@keyframes image-glow-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.6)) 
+            drop-shadow(0 0 20px rgba(0, 229, 255, 0.5))
+            drop-shadow(0 0 40px rgba(0, 229, 255, 0.3))
+            drop-shadow(0 0 60px rgba(0, 229, 255, 0.2));
+  }
+  50% {
+    filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.6)) 
+            drop-shadow(0 0 30px rgba(0, 229, 255, 0.7))
+            drop-shadow(0 0 50px rgba(0, 229, 255, 0.5))
+            drop-shadow(0 0 80px rgba(0, 229, 255, 0.3));
+  }
 }
 
 .profile-image {
@@ -258,6 +300,10 @@
   border-radius: 12px;
   transform: scale(1.04);
   filter: brightness(0.92) saturate(0.92);
+  box-shadow: 
+    0 0 20px rgba(0, 229, 255, 0.4),
+    0 0 40px rgba(0, 229, 255, 0.2),
+    inset 0 0 20px rgba(0, 229, 255, 0.1);
 }
 
 .chevron {
@@ -309,6 +355,14 @@
 
   .hero-title {
     font-size: 48px;
+    text-shadow: 
+      0 0 8px rgba(0, 229, 255, 0.5),
+      0 0 15px rgba(0, 229, 255, 0.3),
+      0 0 25px rgba(0, 229, 255, 0.2);
+  }
+
+  .hero-title {
+    font-size: 48px;
   }
 
   .hero-tech-stack {
@@ -339,7 +393,9 @@
   .profile-image-container {
     max-width: 90%;
     filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.5)) 
-            drop-shadow(0 0 20px rgba(0, 229, 255, 0.12));
+            drop-shadow(0 0 15px rgba(0, 229, 255, 0.4))
+            drop-shadow(0 0 30px rgba(0, 229, 255, 0.25))
+            drop-shadow(0 0 45px rgba(0, 229, 255, 0.15));
   }
 
   .profile-image {
@@ -377,7 +433,9 @@
   .profile-image-container {
     max-width: 90%;
     filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.4)) 
-            drop-shadow(0 0 15px rgba(0, 229, 255, 0.1));
+            drop-shadow(0 0 15px rgba(0, 229, 255, 0.4))
+            drop-shadow(0 0 25px rgba(0, 229, 255, 0.25))
+            drop-shadow(0 0 35px rgba(0, 229, 255, 0.15));
   }
 
   .profile-image {

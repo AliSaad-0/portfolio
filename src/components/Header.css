@@ -69,6 +69,14 @@
   color: var(--primary-color);
 }
 
+.nav-links a.active {
+  color: var(--primary-color);
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
 @media (max-width: 768px) {
   .nav-links {
     gap: 20px;

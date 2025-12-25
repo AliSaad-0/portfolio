@@ -1,6 +1,47 @@
 .projects {
   padding: 100px 0;
   background-color: var(--bg-primary);
+  scroll-margin-top: 80px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  text-shadow: 
+    0 0 10px rgba(0, 229, 255, 0.5),
+    0 0 20px rgba(0, 229, 255, 0.3),
+    0 0 30px rgba(0, 229, 255, 0.2);
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    text-shadow: 
+      0 0 10px rgba(0, 229, 255, 0.5),
+      0 0 20px rgba(0, 229, 255, 0.3),
+      0 0 30px rgba(0, 229, 255, 0.2);
+  }
+  50% {
+    text-shadow: 
+      0 0 15px rgba(0, 229, 255, 0.7),
+      0 0 25px rgba(0, 229, 255, 0.5),
+      0 0 40px rgba(0, 229, 255, 0.3);
+  }
 }
 
 .projects-grid {
@@ -187,6 +228,14 @@
 @media (max-width: 768px) {
   .projects {
     padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 36px;
+    text-shadow: 
+      0 0 8px rgba(0, 229, 255, 0.5),
+      0 0 15px rgba(0, 229, 255, 0.3),
+      0 0 25px rgba(0, 229, 255, 0.2);
   }
 
   .projects-grid {
