@@ -258,32 +258,40 @@
   max-width: 500px;
   height: auto;
   border-radius: 12px;
-  overflow: visible;
+  overflow: hidden;
   background: transparent;
   display: block;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   flex-shrink: 0;
-  filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.6)) 
-          drop-shadow(0 0 20px rgba(0, 229, 255, 0.5))
-          drop-shadow(0 0 40px rgba(0, 229, 255, 0.3))
-          drop-shadow(0 0 60px rgba(0, 229, 255, 0.2));
-  animation: image-glow-pulse 3s ease-in-out infinite;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.4));
 }
 
-@keyframes image-glow-pulse {
+.profile-image-container::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 229, 255, 0.5) 0%, rgba(0, 229, 255, 0.3) 25%, rgba(0, 229, 255, 0.1) 50%, transparent 70%);
+  z-index: 1;
+  animation: center-glow-pulse 3s ease-in-out infinite;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+@keyframes center-glow-pulse {
   0%, 100% {
-    filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.6)) 
-            drop-shadow(0 0 20px rgba(0, 229, 255, 0.5))
-            drop-shadow(0 0 40px rgba(0, 229, 255, 0.3))
-            drop-shadow(0 0 60px rgba(0, 229, 255, 0.2));
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1);
   }
   50% {
-    filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.6)) 
-            drop-shadow(0 0 30px rgba(0, 229, 255, 0.7))
-            drop-shadow(0 0 50px rgba(0, 229, 255, 0.5))
-            drop-shadow(0 0 80px rgba(0, 229, 255, 0.3));
+    opacity: 0.9;
+    transform: translate(-50%, -50%) scale(1.1);
   }
 }
 
@@ -300,10 +308,8 @@
   border-radius: 12px;
   transform: scale(1.04);
   filter: brightness(0.92) saturate(0.92);
-  box-shadow: 
-    0 0 20px rgba(0, 229, 255, 0.4),
-    0 0 40px rgba(0, 229, 255, 0.2),
-    inset 0 0 20px rgba(0, 229, 255, 0.1);
+  position: relative;
+  z-index: 2;
 }
 
 .chevron {
@@ -392,10 +398,12 @@
 
   .profile-image-container {
     max-width: 90%;
-    filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.5)) 
-            drop-shadow(0 0 15px rgba(0, 229, 255, 0.4))
-            drop-shadow(0 0 30px rgba(0, 229, 255, 0.25))
-            drop-shadow(0 0 45px rgba(0, 229, 255, 0.15));
+    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.4));
+  }
+
+  .profile-image-container::before {
+    width: 50%;
+    height: 50%;
   }
 
   .profile-image {
@@ -432,10 +440,12 @@
 
   .profile-image-container {
     max-width: 90%;
-    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.4)) 
-            drop-shadow(0 0 15px rgba(0, 229, 255, 0.4))
-            drop-shadow(0 0 25px rgba(0, 229, 255, 0.25))
-            drop-shadow(0 0 35px rgba(0, 229, 255, 0.15));
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.3));
+  }
+
+  .profile-image-container::before {
+    width: 45%;
+    height: 45%;
   }
 
   .profile-image {
